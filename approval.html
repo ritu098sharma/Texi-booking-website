@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vehicle Requisition Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #800000;
+      padding: 8px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px 25px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #800000;
+      margin-bottom: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 5px 8px;
+      text-align: left;
+    }
+
+    th {
+      background: #800000;
+      color: #fff;
+    }
+
+    form {
+      font-size: 13px;
+    }
+
+    .form-group {
+      margin-bottom: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 2px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 4px 6px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      font-size: 13px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="radio"] {
+      margin-right: 3px;
+    }
+
+    .radio-group label {
+      display: inline-block;
+      margin-right: 12px;
+      font-weight: normal;
+    }
+
+    .note {
+      font-size: 12px;
+      color: #333;
+      background: #e7f3fe;
+      padding: 8px;
+      border-left: 3px solid #2196F3;
+      margin-top: 15px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    button {
+      background: #800000;
+      color: #fff;
+      border: none;
+      padding: 6px 15px;
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 13px;
+      margin: 0 5px;
+    }
+
+    button:hover {
+      background: #a00000;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="approval.html">Approval</a>
+    <a href="status.html">Status</a>
+    <a href="booked.html">Booked</a>
+  </nav>
+
+  <div class="container">
+    <div class="title">Vehicle Requisition Application</div>
+
+    <table>
+      <tr>
+        <th>EmpNo</th>
+        <th>Name</th>
+        <th>Desig</th>
+        <th>Dept</th>
+      </tr>
+      <tr>
+        <td>511182</td>
+        <td>Ravindra Kumar Mahawar</td>
+        <td>M(S)</td>
+        <td>INFORMATION SYSTEMS</td>
+      </tr>
+    </table>
+
+    <form>
+      <div class="form-group">
+        <label>Applying for:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="applying" checked> Self</label>
+          <label><input type="radio" name="applying"> Others</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile Number:</label>
+        <input type="text" name="mobile" value="9664104407">
+      </div>
+
+      <div class="form-group">
+        <label>Reporting at:</label>
+        <textarea rows="2">QTR 2/188, IOCL MATHURA REFINERY NAGAR, Mathura, UP, India, 281006</textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Type of Journey:</label>
+        <select>
+          <option>--Select--</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Tour Type:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="tour"> Outstation Tour</label>
+          <label><input type="radio" name="tour"> Local Tour</label>
+          <label><input type="radio" name="tour"> Administrative Work</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>SBT Trip ID:</label>
+        <input type="text" name="sbt_trip">
+      </div>
+
+      <div class="form-group">
+        <label>Reporting Date:</label>
+        <input type="text" value="08-Jul-2025">
+      </div>
+
+      <div class="form-group">
+        <label>Reporting Time:</label>
+        <input type="text" value="07:00">
+      </div>
+
+      <div class="form-group">
+        <label>Visiting To:</label>
+        <select>
+          <option>Agra</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Approx. Time Required (Hrs):</label>
+        <input type="text" value="0">
+      </div>
+
+      <div class="form-group">
+        <label>Purpose of Visit:</label>
+        <input type="text">
+      </div>
+
+      <div class="form-group">
+        <label>Select HOD:</label>
+        <select>
+          <option>Select HOD</option>
+        </select>
+      </div>
+
+      <div class="note">
+        Note: Please note Starting and Final Reading of the Vehicle provided and submit the same to HR.<br>
+        It is suggested to place the request 24 hrs in advance, otherwise it will be processed next working day.
+      </div>
+
+      <div class="button-container">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

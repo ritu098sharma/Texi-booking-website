@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Status Of Vehicle Requisition</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Bright teal-blue gradient */
+      color: #333;
+    }
+
+    nav {
+      background: #005b96; /* Darker blue nav for contrast */
+      text-align: center;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #005b96;
+      margin-bottom: 30px;
+    }
+
+    .home-button {
+      display: block;
+      margin: 0 auto 20px auto;
+      padding: 8px 25px;
+      background: #005b96;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .home-button:hover {
+      background: #003f63;
+    }
+
+    .details-table {
+      width: 60%;
+      margin: 0 auto 30px auto;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .details-table th, .details-table td {
+      border: 1px solid #005b96;
+      padding: 8px 12px;
+      text-align: center;
+    }
+
+    .details-table th {
+      background: #005b96;
+      color: #fff;
+    }
+
+    .status-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .status-table th, .status-table td {
+      border: 1px solid #005b96;
+      padding: 8px 10px;
+      text-align: center;
+    }
+
+    .status-table th {
+      background: #005b96;
+      color: #fff;
+    }
+
+    .status-table tr:nth-child(even) {
+      background: #f0f8fb;
+    }
+
+    .status-approved {
+      color: #28a745; /* Bright green */
+      font-weight: bold;
+    }
+
+    .status-declined {
+      color: #dc3545; /* Bright red */
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="approval.html">Approval</a>
+    <a href="status.html">Status</a>
+    <a href="booked.html">Booked</a>
+  </nav>
+
+  <div class="container">
+    <button class="home-button">Home</button>
+
+    <h2>Status Of Vehicle Requisition</h2>
+
+    <table class="details-table">
+      <tr>
+        <th>EmpNo</th>
+        <th>Name</th>
+        <th>Desig</th>
+        <th>Dept</th>
+      </tr>
+      <tr>
+        <td>511182</td>
+        <td>Ravindra Kumar Mahawar</td>
+        <td>M(IS)</td>
+        <td>INFORMATION SYSTEMS</td>
+      </tr>
+    </table>
+
+    <table class="status-table">
+      <thead>
+        <tr>
+          <th>T.ID</th>
+          <th>Applied Date</th>
+          <th>Visiting Date</th>
+          <th>Journey Type</th>
+          <th>SBT ID</th>
+          <th>Visiting Place</th>
+          <th>Tour Type</th>
+          <th>Purpose</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1562</td>
+          <td>17-Feb-25</td>
+          <td>22-Feb-25</td>
+          <td>Pickup</td>
+          <td>30142606</td>
+          <td>Mathura</td>
+          <td>Outstation</td>
+          <td>Pickup after Training On Bigfix Solution At Cois from Gurgaon to Mathura</td>
+          <td class="status-approved">APPROVED</td>
+        </tr>
+        <tr>
+          <td>1561</td>
+          <td>17-Feb-25</td>
+          <td>18-Feb-25</td>
+          <td>Drop</td>
+          <td>30142606</td>
+          <td>Gurgaon</td>
+          <td>Outstation</td>
+          <td>Training On Bigfix Solution At Cois</td>
+          <td class="status-approved">APPROVED</td>
+        </tr>
+        <tr>
+          <td>634</td>
+          <td>19-Apr-24</td>
+          <td>21-Apr-24</td>
+          <td>Pickup</td>
+          <td>-</td>
+          <td>Delhi</td>
+          <td>-</td>
+          <td>Bringing Back Family after Transfer to Mathura</td>
+          <td class="status-declined">DECLINED-BY-GM</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

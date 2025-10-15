@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vehicle Requisition Application</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe6e6, #ffffff);
+      color: #7d0404;
+    }
+
+    nav {
+      background: #1e8b00;
+      text-align: center;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: #5e0648;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      color: #8b0000;
+      margin: 30px 0 10px;
+    }
+
+    h4 {
+      text-align: center;
+      text-decoration: underline;
+      margin-bottom: 30px;
+      color: #8b0000;
+    }
+
+    .dropdown {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: 1px solid #8b0000;
+      border-radius: 3px;
+    }
+
+    table {
+      width: 95%;
+      margin: 0 auto 40px;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #8b0000;
+      padding: 8px 10px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    th {
+      background: #8b0000;
+      color: #ffffff;
+    }
+
+    tr:nth-child(even) {
+      background: #fff5f5;
+    }
+
+    input[type="text"] {
+      width: 70px;
+      padding: 4px 6px;
+      font-size: 12px;
+      border: 1px solid #8b0000;
+      border-radius: 2px;
+    }
+
+    .action-btn {
+      margin: 0 3px;
+      padding: 5px 14px;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+
+    .approve {
+      background: #28a745; /* green */
+    }
+
+    .approve:hover {
+      background: #218838;
+    }
+
+    .reject {
+      background: #8b0000; /* red */
+    }
+
+    .reject:hover {
+      background: #0042a5;
+    }
+
+    .home-button {
+      display: block;
+      margin: 0 auto 40px;
+      padding: 8px 30px;
+      background: #8b0000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      border-radius: 4px;
+    }
+
+    .home-button:hover {
+      background: #a50000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="approval.html">Approval</a>
+    <a href="status.html">Status</a>
+    <a href="booked.html">Booked</a>
+  </nav>
+
+  <h2>Vehicle Requisition Application</h2>
+  <h4>Details of Pending Requisitions for Approval</h4>
+
+  <div class="dropdown">
+    <label for="gm">Select GM/CGM</label>
+    <select id="gm">
+      <option value="">-</option>
+    </select>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>T. ID</th>
+        <th>EmpNo</th>
+        <th>Name</th>
+        <th>Desig</th>
+        <th>Applied Date</th>
+        <th>Going Date & Time</th>
+        <th>Place Visiting</th>
+        <th>Journey Type</th>
+        <th>SBT ID</th>
+        <th>External Agency</th>
+        <th>External Agency Name</th>
+        <th>Time Required (Hrs)</th>
+        <th>Purpose</th>
+        <th>Tour Type</th>
+        <th>Remarks</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1788</td>
+        <td>503675</td>
+        <td>Suresh Kumar Yadav</td>
+        <td>M(IS)</td>
+        <td>14-May-25</td>
+        <td>17-May-25 12:30</td>
+        <td>Mathura</td>
+        <td>Pickup</td>
+        <td>32386988</td>
+        <td>N</td>
+        <td>-</td>
+        <td>4</td>
+        <td>AI ML for improved process operation at IIT Bombay</td>
+        <td>Outstation</td>
+        <td><input type="text" /></td>
+        <td>
+          <button class="action-btn approve">APPROVE</button>
+          <button class="action-btn reject">REJECT</button>
+        </td>
+      </tr>
+      <tr>
+        <td>1787</td>
+        <td>503675</td>
+        <td>Suresh Kumar Yadav</td>
+        <td>M(IS)</td>
+        <td>14-May-25</td>
+        <td>15-May-25 09:00</td>
+        <td>Delhi</td>
+        <td>Drop</td>
+        <td>32386988</td>
+        <td>N</td>
+        <td>-</td>
+        <td>3</td>
+        <td>AI ML for improved process operation at IIT Bombay</td>
+        <td>Outstation</td>
+        <td><input type="text" /></td>
+        <td>
+          <button class="action-btn approve">APPROVE</button>
+          <button class="action-btn reject">REJECT</button>
+        </td>
+      </tr>
+    </body>
+  </table>
+
+  <button class="home-button">Home</button>
+
+</body>
+</html>
