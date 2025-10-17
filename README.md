@@ -15,6 +15,6 @@ Responsive and user-friendly design
 
 Technologies Used
 
-HTML5 – page structure
-CSS3 – styling and layout
-JavaScript – interactivity and logic
+HTML – page structure,
+CSS – styling and layout,
+JavaScript – interactivity and logic.
